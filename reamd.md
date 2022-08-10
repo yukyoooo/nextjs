@@ -19,3 +19,8 @@ npm run start
 - サーバーサイドレンダリング(SSR: server side rendering)
 - インクリメンタル静的再生成(ISR: incremental static regeneration)
 
+## storybook
+```
+npx sb init
+npm run storybook
+```
