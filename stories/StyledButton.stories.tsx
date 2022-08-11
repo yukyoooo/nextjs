@@ -11,7 +11,7 @@ export default {
 
 const incrementAction = action('increment')
 
-export const Primary = (props) => {
+export const Primary = (props: any) => {
     const [count, setCount] = useState(0)
     const onClick = (e: React.MouseEvent) => {
         incrementAction(e, count)
@@ -24,7 +24,7 @@ export const Primary = (props) => {
     )
 }
 
-export const Success = (props) => {
+export const Success = (props: any) => {
     return (
         <StyledButton {...props} variant="success" >
             Success
@@ -32,7 +32,7 @@ export const Success = (props) => {
     )
 }
 
-export const Transparent = (props) => {
+export const Transparent = (props: any) => {
     return (
         <StyledButton {...props} variant="transparent" >
             Transparent

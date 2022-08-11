@@ -24,3 +24,26 @@ npm run start
 npx sb init
 npm run storybook
 ```
+
+## test
+```
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom jest-environment-jsdom
+```
+
+jest.config.js
+```js
+const nextJest = require('next/jest')
+const createJestConfig = nextJest({ dir: './' })
+const customJestConfig = {
+	testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+	testEnvironment: 'jsdom',
+}
+
+module.exports = createJestConfig(customJestConfig)
+```
+
+jest.setup.js
+```js
+import '@testing-library/jest-dom/extend-expect'
+```
